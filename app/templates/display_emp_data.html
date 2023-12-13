@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <table border="2px">
+            <caption>Employee</caption>
+            <table border="2px" style="margin-top:50px ;">
+                <tr>
+                    <th>Empno</th>
+                    <th>Ename</th>
+                    <th>Job</th>
+                    <th>Salary</th>
+                    <th>Hiredate</th>
+                    <th>Comm</th>
+                    <th>MGR</th>
+                </tr>
+                {% for emp in EQLO %}
+                <tr>
+                    <td>{{emp.empno}}</td>
+                    <td>{{emp.ename}}</td>
+                    <td>{{emp.job}}</td>
+                    <td>{{emp.sal}}</td>
+                    <td>{{emp.hiredate}}</td>
+                    <td>{{emp.comm}}</td>
+                    <td>{{emp.mgr}}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </table>
+    </center>
+</body>
+</html>

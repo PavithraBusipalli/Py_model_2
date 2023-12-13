@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Data</title>
+</head>
+<body>
+    <center>
+        <h1>Presenting Backend Data to Front End</h1>
+        <table border="2px">
+            <caption>Department</caption>
+            <tr>
+                <th>Deptno</th>
+                <th>Deptname</th>
+                <th>Location</th>
+            </tr>
+            
+            <!-- Jinja operational tags and printin tags in order to display data -->
+
+            {% for dept in DQLO %}
+            <tr>
+                <td>{{ dept.deptno}}</td>
+                <td>{{dept.dname}}</td>
+                <td>{{dept.loc}}</td>
+            </tr>
+            {% endfor %}
+        </table>
+
+    </center>
+</body>
+</html>
